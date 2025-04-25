@@ -81,10 +81,154 @@ nav a {
 }
 #prheader{
     position: relative;
-    font-size: 85px;
+    font-size: 75px;
     margin-left: 140px;
+}
+#scrollArea {
+    position: absolute;
+    width: 25px;
+    height: 90%;
+    margin-left: 25px;
+    background-color: white;   
+}
+/* hide scrollbar everywhere, keep wheel/trackpad scrolling */
+.scrollbox{
+    overflow-y: auto;          /* or scroll — still scrollable  */
+    scrollbar-width: none;     /* Firefox, Chrome/Edge 121+, etc. */
+    -ms-overflow-style: none;  /* old IE / EdgeHTML             */
+}
+.scrollbox::-webkit-scrollbar{ /* Safari + pre-121 Chromium     */
+    display: none;
+}
+.scroller {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    appearance: slider-vertical;
+    width: 2px;
+    vertical-align: bottom;
+    position: absolute;
+    margin-left: 30px;
+    bottom: -700px;
+    -webkit-appearance: none;
+    height: 250px;
+    border-radius: 50px;
+    background: black;
+}
+  
+.scroller::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+#projectsSection{
+    width: auto;
+    height: 70%;
+    padding-left: 180px;
+    margin-top: 50px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#project {
+    margin: 10px;
+    display: grid;                   /* activate CSS Grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns  */
+    grid-template-rows: repeat(2, 1fr);    /* 2 equal-height rows     */
+    gap: 0.4rem;
+    margin-bottom: 20px;
+}
+#projectName {
+    font-size: 35px;
+    line-height: 1.4;
+}
+#codeLang {
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 9px;
+}
+#minidescrip{
+    text-align: right;
+}
+#linkBox {
+    width: 165px;
+    height: 110px;
+    border: 1px solid #000;
 }
 #prRight{
     width: 50%;
     height: 100%;
+}
+#documentation{
+    width: 724px;
+    height: 510px;
+    border: 1px solid #000;
+    background-color: white;
+    margin: 20px; 
+}
+#docuTitle{
+    font-size: 35px;
+    margin: 10px;
+}
+#goBack {
+    position: relative;
+    right: -680px;
+    top: 80px;
+    cursor: pointer;
+    width: 0;
+}
+
+#aboutus {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about{
+    position: absolute;
+    width: 424px;
+    height: 120px;
+    border: 1px solid #000;
+    background-color: white;
+    margin: 20px; 
+    text-align: center;
+    font-size: 50px;
+    padding: 30px;
+}
+#gridPic {
+    margin-top: 90px;
+    width: 40%;
+    height:120%;
+    background-size: contain;
+    background-size: 129%;
+    background-image :url(grid.jpg);
+}
+#boxDesc{
+    position: absolute;
+    right: 350px;
+    width: 520px;
+    height: 480px;
+    border: 1px solid #000;
+    background-color: white;
+    margin-top: 80px; 
+    text-align: center;
+    font-size: 50px;
+    padding: 30px;
+    background-image: url(descr.png);
+    background-repeat: contain;
+    background-size: 100%;
+}
+#humanpicture{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 246px;
+    height: 246px;
+    border-radius: 50%;
+    bottom: -90px;
+    right: 70px;
+    background-image: url(damn.jpg);
+    background-size: cover;
 }
