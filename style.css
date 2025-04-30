@@ -24,6 +24,12 @@ nav a {
     margin-left: auto;
     border-color: black;
 }
+html {
+    scroll-behavior: smooth;   /* enables smooth scrolling for any in-page link */
+  }
+
+
+/* Front Page */
 #titlePage{
     font-size: 145px;
     width: 50%;
@@ -38,11 +44,16 @@ nav a {
 }
 #oneOone{
     position: relative;
-    margin-left: 56%;
-    bottom: -78px;
+    margin-left: 59%;
+    font-family: "CrimsonRoman", "Times New Roman", serif;
+    bottom: -80px;
+    font-weight: 200 900;
 }
 #dotproject{
-    margin-left: 10%;
+    margin-left: 15%;
+    margin-top: 25px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 130px;
 }
 #description {
     margin:60px 5% 0px 10%;
@@ -61,6 +72,38 @@ nav a {
     background-size: 130%;
     background-image :url(grid.jpg);
 }
+#frontpic {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    bottom: 235px;
+    right: 100px;
+    background: url(giveme.jpg);
+    background-size: cover;
+}
+#circle {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: black;
+    border-radius: 50%;
+    right: 80px;
+    bottom: 76px;
+}
+#frontcaption{
+    position: absolute;
+    width: auto;
+    height: auto;
+    right: 150px;
+    bottom: 150px;
+    border: 1px solid #000;
+    background-color: white;
+    padding: 5px;
+    font-size: 25px;
+}
+
+/* Projects Page */
 #projects{
     width: auto;
     height: 100vh;
@@ -173,12 +216,30 @@ nav a {
     margin: 10px;
 }
 #goBack {
-    position: relative;
-    right: -680px;
-    top: 80px;
+    position: fixed;
     cursor: pointer;
-    width: 0;
+    margin: 10px;
+    right: 10px;
+    bottom: 9px;
+    font-size: 20px;
+    font-weight: bold;
+      /* smooth slide-up / fade-out animation */
+ 
+  /* hide at start */
+  opacity: 0;
+  transform: translateY(20%);
+  pointer-events: none;           /* ignore clicks while hidden */
+
+  /* smooth entrance */
+  transition: opacity .3s ease, transform .3s ease;
 }
+#goBack.is-visible{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+/* About Page */
 
 #aboutus {
     width: auto;

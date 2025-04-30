@@ -8,6 +8,25 @@ function setSliderRange(){
   slider.value = max - 10;
 }
 
+
+const btn       = document.getElementById('goBack');
+let   threshold = window.innerHeight;     // = 100 vh right now
+
+function toggleButton(){
+  btn.classList.toggle('is-visible', window.scrollY > threshold);
+}
+
+// run on scroll …
+window.addEventListener('scroll', toggleButton);
+// … and also when the viewport height changes (rotate / resize)
+window.addEventListener('resize', () => {
+  threshold = window.innerHeight;
+  toggleButton();
+});
+
+toggleButton();
+
+
 // scroll pane when user drags the slider
 slider.addEventListener('input', () => {
   pane.scrollTop = slider.max - slider.value;
