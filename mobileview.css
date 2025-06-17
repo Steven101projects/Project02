@@ -161,3 +161,51 @@
   /* body copy in description a shade looser */
   #description{ line-height:1.45; }
 }
+/* ────────────────────────────────
+   PHOTO + CAPTION FOR MOBILE
+   ────────────────────────────────*/
+@media (max-width: 768px){
+
+  /* show the picture again and size it fluidly */
+  #frontpic{
+    display:block;          /* overrides previous display:none   */
+    position:static;        /* let it flow in the document       */
+    width:90%;              /* 90 % of viewport width            */
+    max-width:340px;        /* never stretch beyond this         */
+    aspect-ratio:4/3;       /* keeps a pleasant proportion       */
+    height:auto;            /* auto height maintains ratio       */
+    margin:1rem auto;       /* centred with vertical breathing   */
+    background-size:cover;  /* keep existing cover behaviour     */
+    background-position:center;
+  }
+
+  /* caption just under the image */
+  #frontcaption{
+    display:block;          /* override previous display:none    */
+    position:static;
+    margin:.5rem auto 1.25rem;
+    max-width:85%;
+    font-size:.9rem;        /* smaller, phone-friendly text      */
+    line-height:1.4;
+    text-align:center;
+  }
+
+  /* still hide the heavy extras */
+  #circle, #gridLine{ display:none; }
+}
+/* ────────────────────────────────
+   NAV — EXTRA SHRINK FOR MOBILE
+   ────────────────────────────────*/
+@media (max-width: 768px){
+
+  nav{
+    gap:.35rem .6rem;        /* a bit tighter than before   */
+    margin:.5rem 0;          /* less top/bottom space       */
+  }
+
+  nav a{
+    font-size:.75rem;        /* was .9rem                   */
+    padding:.25rem .35rem;   /* slimmer hit-area            */
+    line-height:1.25;
+  }
+}
