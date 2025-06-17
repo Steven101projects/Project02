@@ -1,0 +1,131 @@
+/* ─────────────────────────────────────────────
+   MOBILE (≤ 768 px) OVERRIDES
+   ─────────────────────────────────────────────*/
+@media (max-width: 768px){
+
+  /* NAVIGATION */
+  nav{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:.5rem 1rem;
+    margin:.75rem auto;
+  }
+  nav a{ font-size:1rem; margin:0; }
+  #line{ width:70%; margin:.25rem auto; }
+
+  /* HERO / TITLE PAGE */
+  #titlePage{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    padding-top:4rem;
+    margin:2rem 0 0;
+    text-align:center;
+  }
+  #name{ font-size:.9rem; opacity: 0%;}
+
+  /* “1O1.projects” lock-up */
+  #oneOone,
+  #dotproject{
+    display:inline-block;
+    position:static;
+    margin:0;
+    line-height:0.8;
+    font-size:clamp(2.3rem,11vw,4.2rem);
+  }
+  #dotproject{ transform:translateX(-.07em); }   /* gentle tuck */
+
+  /* Intro copy */
+  #description{
+    margin:1rem auto 0;
+    max-width:40ch;
+  }
+
+  /* Hide decorative art */
+  #frontpic,#circle,#gridLine{ display:none; }
+  #frontcaption{
+    position:static;
+    margin:1rem auto;
+    max-width:38ch;
+  }
+
+  /* GLOBAL COLUMN STACKING */
+  main{ flex-direction:column; height:auto; }
+  #content{ width:100%; height:auto; }
+
+  /* PORTFOLIO PANEL */
+  #projects{ flex-direction:column; height:auto; }
+  #prLeft,#prRight{ width:100%; height:auto; }
+  #hole,.scroller{ display:none; }       /* kill big circle & slider */
+
+  #prheader{
+    font-size:2.5rem;
+    margin:0 auto 1rem;
+    text-align:center;
+  }
+  #projectsSection{
+    padding:0 1rem;
+    max-height:60vh;
+    overflow-y:auto;
+  }
+  #project{
+    grid-template-columns:1fr;
+    gap:.5rem;
+    margin-bottom:1.25rem;
+  }
+  #projectName{ font-size:1.25rem; }
+  #codeLang   { font-size:.875rem; }
+  #minidescrip{ text-align:left; }
+
+  /* DOCUMENTATION CARD */
+  #documentation{
+    width:100%;
+    max-width:25rem;
+    height:auto;
+    margin:1.25rem auto;
+    padding:1.25rem;
+    box-sizing:border-box;
+  }
+  #docuTitle{
+    font-size:1.4rem;
+    margin:0 0 .75rem;
+    text-align:center;
+  }
+  #documentation p,
+  #documentation li{
+    font-size:.95rem;
+    line-height:1.45;
+  }
+
+  /* ABOUT SECTION */
+  #aboutus{ height:auto; }
+  #about,#boxDesc{
+    position:static;
+    width:90%;
+    margin:1.5rem auto;
+  }
+  #gridPic{
+    width:90%;
+    height:auto;
+    margin:0 auto;
+  }
+  #humanpicture{
+    position:static;
+    margin:1rem auto;
+  }
+
+  /* BACK-TO-TOP BUTTON */
+  #goBack{
+    font-size:1.125rem;
+    right:.75rem;
+    bottom:.75rem;
+  }
+}
+@media (max-width: 768px){
+  /* put “(Nico Castro’s)” ABOVE the 1O1 heading */
+  #name{ order:-1; margin-bottom:.35rem; }   /* flex-order lifts it */
+}
