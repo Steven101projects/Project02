@@ -20,10 +20,8 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
     width:100%;
-    padding-top:4rem;
-    margin:2rem 0 0;
+    padding-top: 200px;
     text-align:center;
   }
   #name{ font-size:.9rem; opacity: 0%;}
@@ -34,7 +32,7 @@
     display:inline-block;
     position:static;
     margin:0;
-    line-height:1;
+    line-height:1.1;
     font-size:clamp(2.3rem,11vw,4.2rem);
   }
   #dotproject{ transform:translateX(-.07em); }   /* gentle tuck */
@@ -143,7 +141,7 @@
   }
 
   /* subtitle area breathes */
-  #titlePage{ padding-top:3rem; padding-bottom:1.5rem; }
+  #titlePage{ padding-bottom:1.5rem; }
 
   /* portfolio section header a bit lighter */
   #prheader{ font-size:2rem; }             /* was 2.5 rem   */
