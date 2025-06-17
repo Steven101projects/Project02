@@ -129,3 +129,35 @@
   /* put “(Nico Castro’s)” ABOVE the 1O1 heading */
   #name{ order:-1; margin-bottom:.35rem; }   /* flex-order lifts it */
 }
+
+/* ────────────────────────────────
+   SMALL-TUNE MOBILE ADJUSTMENTS
+   (adds on top of current rules)
+   ─────────────────────────────── */
+@media (max-width: 768px){
+
+  /* headline lock-up a touch smaller */
+  #oneOone,
+  #dotproject{
+    font-size:clamp(2rem, 9vw, 3.3rem);   /* was 2.3–4.2 rem */
+  }
+
+  /* subtitle area breathes */
+  #titlePage{ padding-top:3rem; padding-bottom:1.5rem; }
+
+  /* portfolio section header a bit lighter */
+  #prheader{ font-size:2rem; }             /* was 2.5 rem   */
+
+  /* project card heading */
+  #projectName{ font-size:1.15rem; }       /* was 1.25 rem  */
+
+  /* documentation card title & spacing */
+  #docuTitle{ font-size:1.25rem; }         /* was 1.4 rem   */
+  #documentation{ margin-top:2rem; }
+
+  /* add gentle gaps between main blocks */
+  #projects, #aboutus{ margin-top:2rem; }
+
+  /* body copy in description a shade looser */
+  #description{ line-height:1.45; }
+}
