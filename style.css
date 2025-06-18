@@ -196,7 +196,7 @@ html {
     text-align: right;
 }
 #linkBox {
-    width: 165px;
+    width: 180px;
     height: 110px;
     border: 1px solid #000;
 }
@@ -215,6 +215,27 @@ html {
     font-size: 35px;
     margin: 10px;
 }
+
+#docuBoard{
+      width: 100%;              /* demo size—scale as needed */
+  height: 85%;
+  background: #eee;
+  display: grid;             /* turn on grid layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns  */
+  grid-template-rows:    repeat(2, 1fr); /* 2 equal-height  rows   */
+             /* space between cells            */
+  box-sizing: border-box;
+}
+
+#centPic {
+    width: 200px;
+    height: 180px;
+}
+#docuPic {
+    width: 180px;
+    height: 140px;
+}
+
 #goBack {
     position: fixed;
     cursor: pointer;
