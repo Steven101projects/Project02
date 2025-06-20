@@ -205,8 +205,8 @@ html {
     height: 100%;
 }
 #documentation{
-    width: 724px;
-    height: 510px;
+    width: 95%;
+    height: 74vh;
     border: 1px solid #000;
     background-color: white;
     margin: 20px; 
@@ -219,7 +219,6 @@ html {
 #docuBoard{
       width: 100%;              /* demo size—scale as needed */
   height: 85%;
-  background: #eee;
   display: grid;             /* turn on grid layout */
   grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns  */
   grid-template-rows:    repeat(2, 1fr); /* 2 equal-height  rows   */
@@ -228,13 +227,99 @@ html {
 }
 
 #centPic {
-    width: 200px;
-    height: 180px;
+    width: 85%;
+    height: 80%;
+    margin: 25px;
+    padding-bottom: 50px;
 }
 #docuPic {
     width: 180px;
     height: 140px;
 }
+#zeroone{
+    margin: 10px;
+    width: 100%;
+    padding-left: 10px;
+}
+#zeroone ul.skills li{margin:.45rem 0;}
+/* .deader{
+    font-size: 20px;
+} */
+/* Base serif look */
+.deader,
+.skills{
+  font-family:"Georgia","Times New Roman",serif;
+  color:#000;
+}
+
+/* Experience / Education lines */
+.deader{
+  margin:.75rem 0;
+  font-size:1.1rem;           /* ≈18 px on a 16-px root */
+}
+.deader a{
+  text-decoration:underline;
+  font-weight:400;
+}
+#teader{
+    margin-bottom: .75rem;
+  font-size:1.1rem;  
+}
+.deader:nth-of-type(1) a{ color:#0652c1; }   /* LinkedIn blue  */
+.deader:nth-of-type(2) a{ color:#2a9e4f; }   /* Diploma green  */
+
+/* “Technical Skills:” heading (the 3rd .deader) */
+.deader:nth-of-type(3){
+  font-size:1.35rem;          /* ≈22 px */
+  font-weight:700;
+}
+
+/* Bullet list */
+/* .skills{
+  margin-left:1.25rem;        
+  padding-left:.4rem;
+  font-size:.80rem;           
+}
+.skills li{ margin:.25rem 0; }
+#tech {
+    padding-left: 15px;
+    padding-top: 0.3rem;
+} */
+/* ------------------------------------------
+   Stylish colour-coded technical-skills list
+   ------------------------------------------ */
+
+/* ---------- TECHNICAL SKILLS COLOUR-CODED VALUES ---------- */
+
+/* base list styling (keep what you already have) */
+.skills{
+  margin-left:1.25rem;
+  padding-left:.4rem;
+  font-size:.9rem;        /* ≈14–15 px */
+  line-height:1.45;
+  list-style:disc;
+}
+.skills li{ margin:.35rem 0; }
+
+/* keep labels black */
+.skills li strong{ color:#000; }
+
+/* ---------- colour per row (values + bullet) ---------- */
+
+/* 1. Languages – blue */
+.skills li:nth-child(1)::marker{
+  color:#4e91fc;          /* colours the bullet */
+}
+
+/* 2. Web Dev – green */
+.skills li:nth-child(2)::marker{ color:#28c76f; }
+
+/* 3. Databases – orange */
+.skills li:nth-child(3)::marker{ color:#ff9f43; }
+
+/* 4. Tools – red */
+.skills li:nth-child(4)::marker{ color:#ea5455; }
+
 
 #goBack {
     position: fixed;
