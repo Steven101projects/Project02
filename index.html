@@ -6,6 +6,9 @@
     <title>101.PROJECTS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobileview.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     <p id="goBack">>> 1O1</p>
@@ -37,7 +40,7 @@
 <div id="projects">
 <section id="prLeft">
     <div id="hole"></div>
-    <p id="prheader">THE PORTFOLIOS</p>
+    <p id="prheader">THE PORTFOLIO<i>S</i></p>
         <input id="scroll"class="scroller" type="range" orient="vertical" min="0"  value="0"  step="1"/>
     <div id="projectsSection" class="scrollbox">
     <div id="project">
@@ -63,11 +66,17 @@
 </section>
 <section id="prRight">
     <div id="documentation">
-        <p id="docuTitle">Documentation</p>
         <div id="docuBoard">
             <div id="zeroone">
-                    <p class="deader"><strong>Experience:</strong> <a href="#">LinkedIn</a></p>
-    <p class="deader"><strong>Education:</strong> <a href="#">College Diploma</a></p>
+                        <p id="docuTitle">Documentation</p>
+                    <p class="deader"><strong>Experience:</strong> <a class="btn-linkedin" href="https://www.linkedin.com/in/your-profile-id"
+   target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile">
+  LinkedIn
+</a></p>
+                    <p class="deader"><strong>Education:</strong> <a class="btn-cent" href="https://www.linkedin.com/in/your-profile-id"
+   target="_blank" rel="noopener">
+  Centennial College
+</a></p>
     <section id="tech">       
          <p id="teader"><strong>Technical Skills:</strong></p>
     <ul class="skills">
@@ -75,21 +84,20 @@
       <li><strong>Web Dev:</strong> <i>HTML, CSS, React, Node.js, Express</i> </li>
       <li><strong>Databases:</strong> <i>Oracle SQL, MySQL, MongoDB</i> </li>
       <li><strong>Tools:</strong><i> Git, GitHub, Postman, VS Code, Linux</i></li></section>
-
     </ul>
-            </div>
-            <div id="zerotwo">
-                        <img id="centPic" src="cent.jpg" alt="">
-            </div>
-            <div id="onethree">
-                        <img id="docuPic" src="cent.jpg" alt="">
-            </div>
-            <div id="onefour">
-                <h3 class="awards">Awards and Certifications</h3>
-    <p class="external"><strong>External:</strong> Github Page</p>
-        <button class="more-info">More Info</button>
+    <div id="onethree">
+                        <img id="docuPic" src="docPic.jpg" alt="">
             </div>
         </div>
+              <div id="zerotwo">
+                        <img id="centPic" src="cent.jpg" alt="">
+                        <div id="onefour">
+                <a href="#" id="awards" class="deader">- Awards and Certifications</a>
+    <p class="external"><strong>External:</strong> Github Page</p>
+        <button class="more-info">More Info</button>
+    </div>
+    </div>
+        </div>            
     </div>
 </section>
 </div>
