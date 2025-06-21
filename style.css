@@ -358,12 +358,20 @@ html {
 #awards {
     font-size: 1.7rem;
     margin-left: 20px;
-    color: #ffd727;      /* match your orange heading */
-  text-decoration: none;
+    color: #ebbb10;
+    text-decoration: none;
 }
 .external {
     font-size: 1.7rem;
     margin: 5px 10px;
+}
+.btn-download{
+    text-decoration: none;
+      color:#fff; 
+}
+.btn-github{
+        text-decoration: none;
+      color:#2d2b2b; 
 }
 .more-info {
     margin-top: 20px;
@@ -371,8 +379,7 @@ html {
     padding:.6rem 1.4rem;          /* room to breathe */
   font-size:2rem;             /* matches your mock-up’s size */
   font-weight: 300;
-  font-family:inherit;           /* stay consistent with site */
-  color:#fff;                    /* white text */
+  font-family:inherit;           /* stay consistent with site */                   /* white text */
   background:#262121;            /* charcoal fill */
   border:0;                      /* remove default border */
   border-radius:10px;            /* soft corners */
