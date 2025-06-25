@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────
-   MOBILE (≤ 768 px) OVERRIDES
+   MOBILE (≤ 768 px)  —  UPDATED TO MATCH DESKTOP
    ─────────────────────────────────────────────*/
 @media (max-width: 768px){
 
@@ -9,10 +9,15 @@
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:.5rem 1rem;
-    margin:.75rem auto;
+    gap:.35rem .6rem;          /* a touch tighter */
+    margin:.5rem 0;
   }
-  nav a{ font-size:1rem; margin:0; }
+  nav a{
+    font-size:.75rem;
+    padding:.25rem .35rem;
+    line-height:1.25;
+    margin:0;
+  }
   #line{ width:70%; margin:.25rem auto; }
 
   /* HERO / TITLE PAGE */
@@ -21,47 +26,73 @@
     flex-direction:column;
     align-items:center;
     width:100%;
-    padding-top: 200px;
+    padding:200px 0 1.5rem;
     text-align:center;
   }
-  #name{ font-size:.9rem; opacity: 0%;}
-
-  /* “1O1.projects” lock-up */
+  #name{
+    order:-1;                 /* appears above the 1O1 lock-up */
+    margin-bottom:.35rem;
+    font-size:.9rem;
+    opacity:0;                /* still visually hidden */
+  }
   #oneOone,
   #dotproject{
     display:inline-block;
     position:static;
     margin:0;
     line-height:1.1;
-    font-size:clamp(2.3rem,11vw,4.2rem);
+    font-size:clamp(2rem, 9vw, 3.3rem);   /* tuned down a bit */
   }
-  #dotproject{ transform:translateX(-.07em); }   /* gentle tuck */
+  #dotproject{ transform:translateX(-.07em); }
 
   /* Intro copy */
   #description{
     margin:1rem auto 0;
     max-width:40ch;
+    line-height:1.45;
   }
 
-  /* Hide decorative art */
-  #frontpic,#circle,#gridLine{ display:none; }
-  #frontcaption{
+  /* PHOTO & CAPTION */
+  #frontpic{
+    display:block;            /* overrides desktop display:none */
     position:static;
+    width:90%;
+    max-width:340px;
+    aspect-ratio:4/3;
+    height:auto;
     margin:1rem auto;
-    max-width:38ch;
+    background-size:cover;
+    background-position:center;
   }
+  #frontcaption{
+    display:block;
+    position:static;
+    margin:.5rem auto 1.25rem;
+    max-width:85%;
+    font-size:.9rem;
+    line-height:1.4;
+    text-align:center;
+  }
+  #circle,
+  #gridLine{ display:none; }   /* keep heavy decorations off */
 
   /* GLOBAL COLUMN STACKING */
   main{ flex-direction:column; height:auto; }
   #content{ width:100%; height:auto; }
 
   /* PORTFOLIO PANEL */
-  #projects{ flex-direction:column; height:auto; }
-  #prLeft,#prRight{ width:100%; height:auto; }
-  #hole,.scroller{ display:none; }       /* kill big circle & slider */
+  #projects{
+    flex-direction:column;
+    height:auto;
+    margin-top:2rem;
+  }
+  #prLeft,
+  #prRight{ width:100%; height:auto; }
+  #hole,
+  .scroller{ display:none; }   /* hide big circle + custom slider */
 
   #prheader{
-    font-size:2.5rem;
+    font-size:2rem;           /* was 2.5rem */
     margin:0 auto 1rem;
     text-align:center;
   }
@@ -75,33 +106,16 @@
     gap:.5rem;
     margin-bottom:1.25rem;
   }
-  #projectName{ font-size:1.25rem; }
-  #codeLang   { font-size:.875rem; }
+  #projectName{ font-size:1.15rem; }
+  #codeLang  { font-size:.875rem; }
   #minidescrip{ text-align:left; }
 
   /* DOCUMENTATION CARD */
-  #documentation{
-    width:100%;
-    max-width:25rem;
-    height:auto;
-    margin:1.25rem auto;
-    padding:1.25rem;
-    box-sizing:border-box;
-  }
-  #docuTitle{
-    font-size:1.4rem;
-    margin:0 0 .75rem;
-    text-align:center;
-  }
-  #documentation p,
-  #documentation li{
-    font-size:.95rem;
-    line-height:1.45;
-  }
-
+ 
   /* ABOUT SECTION */
-  #aboutus{ height:auto; }
-  #about,#boxDesc{
+  #aboutus{ height:auto; margin-top:2rem; }
+  #about,
+  #boxDesc{
     position:static;
     width:90%;
     margin:1.5rem auto;
@@ -116,94 +130,89 @@
     margin:1rem auto;
   }
 
-  /* BACK-TO-TOP BUTTON */
+  /* UNIVERSAL BUTTON TWEAKS (uses your new .btn pattern) */
+  .btn{
+    padding:.4rem .85rem;
+    font-size:.9rem;
+  }
+  .btn-github{ margin:.5rem auto 1rem; }
+
+  /* BACK-TO-TOP */
   #goBack{
     font-size:1.125rem;
     right:.75rem;
     bottom:.75rem;
   }
 }
-@media (max-width: 768px){
-  /* put “(Nico Castro’s)” ABOVE the 1O1 heading */
-  #name{ order:-1; margin-bottom:.35rem; }   /* flex-order lifts it */
-}
 
-/* ────────────────────────────────
-   SMALL-TUNE MOBILE ADJUSTMENTS
-   (adds on top of current rules)
-   ─────────────────────────────── */
-@media (max-width: 768px){
-
-  /* headline lock-up a touch smaller */
-  #oneOone,
-  #dotproject{
-    font-size:clamp(2rem, 9vw, 3.3rem);   /* was 2.3–4.2 rem */
+/* ───────── MOBILE ≤ 768 px ───────── */
+@media (max-width: 768px) {
+/* ——— AWARDS & EXTERNAL LINKS ——— */
+ #documentation{
+    width:100%;
+    max-width:25rem;
+    height:auto;
+    margin:2rem auto;
+    padding:1.25rem;
+    box-sizing:border-box;
   }
-
-  /* subtitle area breathes */
-  #titlePage{ padding-bottom:1.5rem; }
-
-  /* portfolio section header a bit lighter */
-  #prheader{ font-size:2rem; }             /* was 2.5 rem   */
-
-  /* project card heading */
-  #projectName{ font-size:1.15rem; }       /* was 1.25 rem  */
-
-  /* documentation card title & spacing */
-  #docuTitle{ font-size:1.25rem; }         /* was 1.4 rem   */
-  #documentation{ margin-top:2rem; }
-
-  /* add gentle gaps between main blocks */
-  #projects, #aboutus{ margin-top:2rem; }
-
-  /* body copy in description a shade looser */
-  #description{ line-height:1.45; }
-}
-/* ────────────────────────────────
-   PHOTO + CAPTION FOR MOBILE
-   ────────────────────────────────*/
-@media (max-width: 768px){
-
-  /* show the picture again and size it fluidly */
-  #frontpic{
-    display:block;          /* overrides previous display:none   */
-    position:static;        /* let it flow in the document       */
-    width:90%;              /* 90 % of viewport width            */
-    max-width:340px;        /* never stretch beyond this         */
-    aspect-ratio:4/3;       /* keeps a pleasant proportion       */
-    height:auto;            /* auto height maintains ratio       */
-    margin:1rem auto;       /* centred with vertical breathing   */
-    background-size:cover;  /* keep existing cover behaviour     */
-    background-position:center;
-  }
-
-  /* caption just under the image */
-  #frontcaption{
-    display:block;          /* override previous display:none    */
-    position:static;
-    margin:.5rem auto 1.25rem;
-    max-width:85%;
-    font-size:.9rem;        /* smaller, phone-friendly text      */
-    line-height:1.4;
+  #docuTitle{
+    font-size:1.25rem;        /* was 1.4rem */
+    margin:0 0 .75rem;
     text-align:center;
   }
+  #documentation p,
+  #documentation li{
+    font-size:.95rem;
+    line-height:1.45;
+  }
 
-  /* still hide the heavy extras */
-  #circle, #gridLine{ display:none; }
+  /* Banner with pixel font */
+  #docPic{
+    width:90%;
+    max-width:20rem;
+    height:auto;
+    font-size:.75rem;
+  }
+
+  /* Image inside documentation (matches new desktop sizing) */
+  #centPic{
+    width:min(260px, 80%);
+    aspect-ratio:4 / 3;
+    height:auto;
+    margin:1rem 3rem;
+    box-shadow:12px 12px 20px -5px rgba(0,0,0,.15);
+  }
+  #onefour{ margin-top:1.5rem; }
+
+  /* AWARDS / MORE INFO SECTION */
+  .more-info{
+    display:block;
+    width:fit-content;
+    margin:2rem auto 0;
+    font-size:1.25rem;
+  }
+
+/* 1 )  Center the heading itself … */
+#awards{
+  text-align:center;
+  margin:2rem 0 1rem;     /* keep a bit of breathing room */
 }
-/* ────────────────────────────────
-   NAV — EXTRA SHRINK FOR MOBILE
-   ────────────────────────────────*/
-@media (max-width: 768px){
 
-  nav{
-    gap:.35rem .6rem;        /* a bit tighter than before   */
-    margin:.5rem 0;          /* less top/bottom space       */
-  }
+/* 3 )  GitHub pill sits in the middle. */
+.btn-github{
+  display:inline-flex;    /* keeps icon + text tight */
+  align-items:center;
+  justify-content:center;
+  margin:0.75rem auto;    /* auto L/R ⇒ centered */
+}
 
-  nav a{
-    font-size:.75rem;        /* was .9rem                   */
-    padding:.25rem .35rem;   /* slimmer hit-area            */
-    line-height:1.25;
-  }
+/* 4 )  Optional: if your “External:” label is
+        inside <strong> or its own span, give it a class
+        (e.g. .external-label) and un-bold it here. */
+.external-label{
+  font-weight:600;        /* keep or reduce as you like */
+  display:block;
+}
+
 }
