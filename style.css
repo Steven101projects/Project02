@@ -157,6 +157,7 @@ html {
     border-radius: 50px;
     background: black;
 }
+
   
 .scroller::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -174,7 +175,7 @@ html {
     overflow-y: auto;
     overflow-x: hidden;
 }
-#project {
+.project {
     margin: 10px;
     display: grid;                   /* activate CSS Grid */
     grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns  */
@@ -182,20 +183,21 @@ html {
     gap: 0.4rem;
     margin-bottom: 20px;
 }
-#projectName {
+.projectName {
     font-size: 35px;
     line-height: 1.4;
+    cursor: pointer;
 }
-#codeLang {
+.codeLang {
     font-size: 14px;
     display: flex;
     align-items: flex-end;
     padding-bottom: 9px;
 }
-#minidescrip{
+.minidescrip{
     text-align: right;
 }
-#linkBox {
+.linkBox {
     width: 180px;
     height: 110px;
     border: 1px solid #000;
@@ -213,6 +215,7 @@ html {
 }
 #docuTitle{
     font-size: 35px;
+    margin: .60rem;
 }
 
 #docuBoard{
@@ -221,12 +224,9 @@ html {
   height: 85%;
   box-sizing: border-box;
 }
-#docuPic {
-    width: 160px;
-    height: 120px;
-    transform: rotate(-11deg);
-    margin-left: 40px;
-    margin-top: 20px;
+#ext {
+    margin-left: 2.5%;
+    margin-top: 1%;
 }
 #zeroone{
     margin: 10px;
@@ -356,13 +356,13 @@ html {
 /* 4. Tools – red */
 .skills li:nth-child(4)::marker{ color:#ea5455; }
 #awards {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: #ebbb10;
     text-decoration: none;
     margin: 18px 0px;
 }
 .external {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     margin: 10px 0px;
 }
 .btn-download{
@@ -391,17 +391,95 @@ html {
 }
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-#docPic {
+#projPreview{
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #000;   
-    width: 670px;
-    height: 80px;
+    width: 95%;
+    height: 75%;
       font-family: "Press Start 2P", "VT323", "Courier New", monospace;
   font-size: 14px;          /* pixel fonts need small sizes */
   letter-spacing: 0.03em;   
+  margin-left: 2.5%;
+  margin-top: 2%;
 }
+#jfline {
+    width: 95%;
+    margin-left: 2%;
+}
+#projfile {
+    height: 70%;
+
+}
+#jfheader {
+    font-size: 2.2rem;
+    margin-left: 2%;
+}
+#jfcontent {
+    display: flex;
+    margin-bottom: 2%;
+}
+#jfvisual {
+    width: 45%;
+    height: 160px;
+    background-color: rgb(198, 198, 198);
+    margin: 10px;
+}
+#jfdesc {
+        font-family: "CrimsonRoman", "Times New Roman", serif;
+    width: 70%;
+    height: auto;
+    margin-top: 2%;
+    margin-right: 2%;
+
+}
+#jftitle {
+display: flex;
+   font-size: 2rem;          /* pixel fonts need small sizes */
+  letter-spacing: 0.03em; 
+  margin: 7px;
+}
+#jflang {
+     font-size: .7rem; 
+     margin-top: 1.2rem;  
+}
+#jftext {
+   font-size: 1rem;          /* pixel fonts need small sizes */
+  letter-spacing: 0.03em; 
+  text-align: right;
+  margin-right: 2%;
+}
+#jfslider {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: .5rem 0;
+
+  /* Hide scrollbar cross-browser */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+
+#jfslider::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}
+
+.jfproject-container {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  padding: 0 1rem;
+}
+
+.jfproject-item {
+  flex: 0 0 auto;
+  width: 140px;
+  height: 90px;
+  background-color: #ccc;
+}
+
 /* optional hover effect */
 .more-info:hover {
   transform: translateY(-2px);
