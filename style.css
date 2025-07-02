@@ -226,7 +226,7 @@ html {
 }
 #ext {
     margin-left: 2.5%;
-    margin-top: 1%;
+    margin-top: 1.8%;
 }
 #zeroone{
     margin: 10px;
@@ -362,16 +362,11 @@ html {
     margin: 18px 0px;
 }
 .external {
-    font-size: 1.3rem;
-    margin: 10px 0px;
+    font-size: 1rem;
 }
 .btn-download{
     text-decoration: none;
   color: rgb(0, 0, 0);  
-}
-.btn-github{
-        text-decoration: none;
-      color:#2d2b2b; 
 }
 .more-info {
   margin-top: 160px;
@@ -496,18 +491,16 @@ display: flex;
   padding: .5rem 1rem;
   background: #333;
   color: #fff;
-  border-radius: .5rem;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: .9rem;
+  font-weight: 800;
   transition:
     background .3s ease,
     transform  .3s ease,
     box-shadow .3s ease;
-  margin-left: .5rem;
 }
 .btn-github i {
-  margin-right: .5rem;
+  margin-left: .5rem;
   font-size: 1.2em;
 }
 .btn-github:hover {
