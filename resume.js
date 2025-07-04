@@ -27,6 +27,18 @@ window.addEventListener('resize', () => {
 toggleButton();
 
 
+//HOVERING ABT-INFO
+  const card = document.getElementById('aboutCard');
+  const info = document.getElementById('abt-info');
+
+  /* keyboard + touch support */
+  card.addEventListener('mouseenter', () => info.classList.add('show'));
+  card.addEventListener('mouseleave', () => info.classList.remove('show'));
+
+  /* optional: allow keyboard focus */
+  card.addEventListener('focus',   () => info.classList.add('show'));
+  card.addEventListener('blur',    () => info.classList.remove('show'));
+
 // scroll pane when user drags the slider
 slider.addEventListener('input', () => {
   pane.scrollTop = slider.max - slider.value;

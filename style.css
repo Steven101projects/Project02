@@ -122,7 +122,7 @@ html {
     font-size: 50px;
     padding: 20px 5px;
     z-index: 3;
-    top: 110%;
+    top: 105%;
 }
 #sphere {
     position: absolute;
@@ -131,17 +131,21 @@ html {
     background-color: black;
     border-radius: 50%;
     left: 16%;
-    top: 111%;
+    top: 109%;
     z-index: -2;
 }
 #aboutCard {
-    margin: 5%;
+    display: flex;
+    margin: 3%;
     width: 60%;
     height: 60%;
     border: 1.4px solid #000;
     background-color: white;
     border-radius: 16px;
     z-index: 2;
+  transition:
+    transform .15s ease,
+    box-shadow .25s ease;
 }
 #sphereTwo {
     position: absolute;
@@ -150,17 +154,17 @@ html {
     background-color: black;
     border-radius: 50%;
     z-index: 1;
-    top: 168%;
-    left: 72%;
+    top: 160%;
+    left: 73%;
 }
 .more-info {
   z-index: 5;
   position: absolute;
-  top: 160%;
+  top: 155%;
   left: 63%;
   margin-top: 160px;
   margin-left: 70px;
-  padding: 1rem 1.4rem;              /* room to breathe */
+  padding: 1.1rem 1.4rem;              /* room to breathe */
   background-color: #ffffff;             /* white background */                     /* black text */
   font-size: 1.5rem;                    /* matches your mock-up’s size */
   font-weight: 300;
@@ -173,18 +177,62 @@ html {
     transform .15s ease,
     box-shadow .25s ease;
 }
+#pix {
+    margin: 10px;
+}
+#pix p {
+    font-size: 1.4rem;
+    margin-left: 10%;
+}
+#text {
+    font-size: 1.2rem;
+    line-height: 1.6;                                 /* comfortable vertical rhythm */
+    letter-spacing: 0.02em;                           /* subtle – don’t over-space  */
+    text-align: justify;                              /* straight left + right edge */
+    text-indent: 1.5em;                               /* first-line indent like books */
+    hyphens: auto; 
+    margin: 60px 40px 30px 66px;
+}
 #humanpicture{
-    position: relative;
     background-color: rgb(255, 255, 255);
-    width: 260px;
-    height: 260px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    bottom: -80px;
-    left: 3%;
     background-image: url(damn.jpg);
     background-size: cover;
-
+    margin: 30px 30px 20px 30px;
 }
+#abt-info {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 176%;
+    left: 21%;
+
+      /* start fully hidden */
+  opacity:0;
+  transform-origin:top center;      /* where the fold begins */
+  transform:scaleY(0);              /* flattened behind the card */
+  transition:opacity .35s ease, 
+             transform .35s ease;
+  pointer-events:none;              /* ignore clicks while hidden */
+}
+
+/* pure-CSS trigger (works on desktop hover) */
+#aboutCard:hover + #abt-info{
+  opacity:1;
+  transform:scaleY(1);              /* unfold */
+  pointer-events:auto;
+}
+
+/* JS trigger (touch / keyboard users) */
+#abt-info.show{                     /* class added by JS */
+  opacity:1;
+  transform:scaleY(1);
+  pointer-events:auto;
+}
+
+
+
 
 
 
