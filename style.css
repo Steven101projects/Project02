@@ -65,10 +65,9 @@ html {
 }
 #gridLine {
     width: 95%;
-    height: 170%;
+    height: 277%;
     margin-top: 10%;
     margin-left: auto;
-    background-size: contain;
     background-size: 130%;
     background-image :url(grid.jpg);
 }
@@ -103,6 +102,92 @@ html {
     font-size: 25px;
 }
 
+/* About Page */
+
+#aboutus {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about{
+    position: absolute;
+    width: 384px;
+    height: 100px;
+    border: 1.4px solid #000;
+    background-color: white;
+    margin: 20px; 
+    text-align: center;
+    font-size: 50px;
+    padding: 20px 5px;
+    z-index: 3;
+    top: 110%;
+}
+#sphere {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: black;
+    border-radius: 50%;
+    left: 16%;
+    top: 111%;
+    z-index: -2;
+}
+#aboutCard {
+    margin: 5%;
+    width: 60%;
+    height: 60%;
+    border: 1.4px solid #000;
+    background-color: white;
+    border-radius: 16px;
+    z-index: 2;
+}
+#sphereTwo {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 1;
+    top: 168%;
+    left: 72%;
+}
+.more-info {
+  z-index: 5;
+  position: absolute;
+  top: 160%;
+  left: 63%;
+  margin-top: 160px;
+  margin-left: 70px;
+  padding: 1rem 1.4rem;              /* room to breathe */
+  background-color: #ffffff;             /* white background */                     /* black text */
+  font-size: 1.5rem;                    /* matches your mock-up’s size */
+  font-weight: 300;
+  font-family: inherit;               /* stay consistent with site */
+  border: 1px solid #000;             /* solid black border */
+  border-radius: 26px;                /* soft corners */
+  text-decoration: none;              /* remove underline on <a> */
+  cursor: pointer;
+  transition:
+    transform .15s ease,
+    box-shadow .25s ease;
+}
+#humanpicture{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    bottom: -80px;
+    left: 3%;
+    background-image: url(damn.jpg);
+    background-size: cover;
+
+}
+
+
+
 /* Projects Page */
 #projects{
     width: auto;
@@ -124,11 +209,11 @@ html {
 }
 #prheader{
     position: relative;
-    font-size: 75px;
+    font-size: 4rem;
     margin-left: 140px;
 }
 #scrollArea {
-    position: absolute;
+    position: relative;
     width: 25px;
     height: 90%;
     margin-left: 25px;
@@ -151,9 +236,9 @@ html {
     vertical-align: bottom;
     position: absolute;
     margin-left: 30px;
-    bottom: -700px;
+    bottom: -205%;
     -webkit-appearance: none;
-    height: 250px;
+    height: 260px;
     border-radius: 50px;
     background: black;
 }
@@ -368,22 +453,7 @@ html {
     text-decoration: none;
   color: rgb(0, 0, 0);  
 }
-.more-info {
-  margin-top: 160px;
-  margin-left: 70px;
-  padding: .6rem 1.4rem;              /* room to breathe */
-  background-color: #ffffff;             /* white background */                     /* black text */
-  font-size: 2rem;                    /* matches your mock-up’s size */
-  font-weight: 300;
-  font-family: inherit;               /* stay consistent with site */
-  border: 1px solid #000;             /* solid black border */
-  border-radius: 10px;                /* soft corners */
-  text-decoration: none;              /* remove underline on <a> */
-  cursor: pointer;
-  transition:
-    transform .15s ease,
-    box-shadow .25s ease;
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 #projPreview{
@@ -533,57 +603,3 @@ display: flex;
     pointer-events: auto;
   }
 
-/* About Page */
-
-#aboutus {
-    width: auto;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#about{
-    position: absolute;
-    width: 424px;
-    height: 120px;
-    border: 1px solid #000;
-    background-color: white;
-    margin: 20px; 
-    text-align: center;
-    font-size: 50px;
-    padding: 30px;
-}
-#gridPic {
-    margin-top: 90px;
-    width: 40%;
-    height:120%;
-    background-size: contain;
-    background-size: 129%;
-    background-image :url(grid.jpg);
-}
-#boxDesc{
-    position: absolute;
-    right: 350px;
-    width: 520px;
-    height: 480px;
-    border: 1px solid #000;
-    background-color: white;
-    margin-top: 80px; 
-    text-align: center;
-    font-size: 50px;
-    padding: 30px;
-    background-image: url(descr.png);
-    background-repeat: contain;
-    background-size: 100%;
-}
-#humanpicture{
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    width: 246px;
-    height: 246px;
-    border-radius: 50%;
-    bottom: -90px;
-    right: 70px;
-    background-image: url(damn.jpg);
-    background-size: cover;
-}
