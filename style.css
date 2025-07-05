@@ -65,11 +65,11 @@ html {
 }
 #gridLine {
     width: 95%;
-    height: 277%;
+    height: 280%;
     margin-top: 10%;
     margin-left: auto;
     background-size: 130%;
-    background-image :url(grid.jpg);
+    background-image :url(grid.png);
 }
 #frontpic {
     position: absolute;
@@ -122,7 +122,7 @@ html {
     font-size: 40px;
     padding: 20px 5px;
     z-index: 3;
-    top: 115%;
+    top: 110%;
 }
 #sphere {
     position: absolute;
@@ -131,14 +131,14 @@ html {
     background-color: black;
     border-radius: 50%;
     left: 16%;
-    top: 118%;
+    top: 112%;
     z-index: -2;
 }
 #aboutCard {
     display: flex;
-    margin: 7%;
+    margin: 5%;
     width: 60%;
-    height: 50%;
+    height: 55%;
     border: 1.4px solid #000;
     background-color: white;
     border-radius: 16px;
@@ -149,19 +149,19 @@ html {
 }
 #sphereTwo {
     position: absolute;
-    width: 210px;
-    height: 210px;
+    width: 260px;
+    height: 260px;
     background-color: black;
     border-radius: 50%;
     z-index: 1;
-    top: 165%;
-    left: 74%;
+    top: 152%;
+    left: 67%;
 }
 .more-info {
   z-index: 5;
   position: absolute;
-  top: 159%;
-  left: 64%;
+  top: 155%;
+  left: 60%;
   margin-top: 160px;
   margin-left: 70px;
   padding: 1.1rem 1.4rem;              /* room to breathe */
@@ -178,30 +178,33 @@ html {
     box-shadow .25s ease;
 }
 #pix {
+   width: 45%;
+   height: auto;
     margin: 10px;
+    align-content: flex-end;
 }
 #pix p {
     font-size: 1.4rem;
-    margin-left: 15%;
-    margin-bottom: 8%;
+    margin-left: 9%;
+    margin-bottom: 10%;
 }
 #text {
+  width: 65%;
     font-size: 1.2rem;
     line-height: 1.6;                                 /* comfortable vertical rhythm */
     letter-spacing: 0.04em;                           /* subtle – don’t over-space  */
-    text-align: justify;
-    text-indent: 1em;                            /* straight left + right edge */                              /* first-line indent like books */
+    text-align: center;                            /* straight left + right edge */                              /* first-line indent like books */
     hyphens: auto; 
-    margin: 70px 60px 30px 45px;
+    margin: 70px 80px 30px 55px;
 }
 #humanpicture{
     background-color: rgb(255, 255, 255);
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    border-radius: 23%;
     background-image: url(damn.jpg);
     background-size: cover;
-    margin: 20px 30px 20px 50px;
+    margin: 25px 30px 15px 20px;
 }
 #abt-info {
     font-family: Arial, Helvetica, sans-serif;
@@ -230,6 +233,24 @@ html {
   opacity:1;
   transform:scaleY(1);
   pointer-events:auto;
+}
+/* keyframes */
+@keyframes growOnce {
+  0%   { transform: scale(0.65); }
+  100% { transform: scale(1);   }
+}
+
+/* apply */
+#sphere {
+  /* …your existing properties… */
+  animation: growOnce 1.5s ease-out forwards; /* runs once, stays large */
+  transform-origin: center;
+}
+
+#sphereTwo {
+  /* …your existing properties… */
+  animation: growOnce 2s ease-out forwards;
+  transform-origin: center;
 }
 
 
@@ -260,6 +281,7 @@ html {
     position: relative;
     font-size: 5rem;
     margin-left: 160px;
+    top: 3%;
 }
 #scrollArea {
     position: relative;
@@ -285,9 +307,9 @@ html {
     vertical-align: bottom;
     position: absolute;
     margin-left: 30px;
-    bottom: -220%;
+    bottom: -210%;
     -webkit-appearance: none;
-    height: 390px;
+    height: 300px;
     border-radius: 50px;
     background: black;
 }
@@ -305,7 +327,7 @@ html {
     width: auto;
     height: 70%;
     padding-left: 180px;
-    margin-top: 50px;
+    margin-top: 30px;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -656,14 +678,13 @@ display: flex;
   /* ─── Services section ───────────────────────────── */
 #services{
   position:relative;
-  padding:4rem 5% 6rem 5%;
+  padding:9rem 5% 6rem 5%;
   overflow:hidden;
-  margin-top: 5%;
 }
 
 .services-title{
   font-size:4.5rem;
-  margin:0;
+  padding-left: 60%;
   text-align:right;
 }
 
