@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+     <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Projects</a>
+                <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+    <a href=""><i>Hub</i></a>
+        </nav>
+        <hr id="line">
+        <div id="projects">
+        <section id="prLeft">
+            <div id="hole"></div>
+            <p id="prheader">THE<strong id="the"> PORTFOLIO<i>S</i></strong></p>
+            <input id="scroll" class="scroller" type="range" orient="vertical" min="0" value="0" step="1" />
+            <div id="projectsSection" class="scrollbox">
+                <div class="project">
+                    <p class="projectName" id="colPort"><i>Portfolio 01:</i><br>COLLEGE ODYSSEY</p>
+                    <p class="codeLang">C#/HTML/CSS/JavaScript/Java</p>
+                    <p class="minidescrip">A curated collection of projects and assignments from my Software Engineering
+                        Technician program, showcasing real-world problem solving through dynamic programming,
+                        interactive web development, and smart database design.</p>
+                    <div class="linkBox">
+                    </div>
+                </div>
+                <div class="project">
+                    <p class="projectName"><i>Portfolio 02:</i><br>BASEMENT PROJECTS</p>
+                    <p class="codeLang">C#/HTML/CSS/JavaScript/Java</p>
+                    <p class="minidescrip">A hands-on collection of experimental side projects built right from the
+                        basement—where ideas turn into code! From web apps to software tools, each project reflects
+                        creativity, curiosity, and passion for development.</p>
+                    <div class="linkBox"></div>
+                </div>
+                <div class="project">
+                    <p class="projectName"><i>Portfolio 03:</i><br>BUSINESS QUESTS</p>
+                    <p class="codeLang">HTML/CSS/JavaScript</p>
+                    <p class="minidescrip">A collection of real-world projects from business deals, freelance
+                        commissions,
+                        and work-related tasks—each built to meet client needs using practical, clean, and responsive
+                        HTML, CSS, and JavaScript.</p>
+                    <div class="linkBox"></div>
+                </div>
+            </div>
+        </section>
+        <section id="prRight">
+            <div id="documentation">
+                <p id="docuTitle">Documentation</p>
+                <div id="projPreview">
+                    Click on the portfolio's name to see more.
+                    <div id="jflowSection">
+                    </div>
+                </div>
+                <div id="ext">
+                    <p class="external">
+                        <a target="_blank" href="https://github.com/Steven101projects" role="button" class="btn-github">
+                            External: <i class="fab fa-github"></i>
+                        </a>
+                </div>
+
+        </section>
+    </div>
+</body>
+<script>
+
+    const pane   = document.getElementById('projectsSection');
+const slider = document.getElementById('scroll');
+
+// set slider’s max = scrollable pixels
+function setSliderRange(){
+  const max = pane.scrollHeight - pane.clientHeight;
+  slider.max = max;               // pixel-for-pixel mapping
+  slider.value = max - 10;
+}
+// scroll pane when user drags the slider
+slider.addEventListener('input', () => {
+  pane.scrollTop = slider.max - slider.value;
+});
+
+// move slider when user scrolls the wheel / touchpad
+pane.addEventListener('scroll', () => {
+    slider.value = slider.max - pane.scrollTop;
+});
+
+// keep things in sync on load & when window resizes
+setSliderRange();
+window.addEventListener('resize', setSliderRange);
+</script>
+</html>
