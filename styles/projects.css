@@ -1,0 +1,393 @@
+
+/* Projects Page */
+#projects{
+    width: auto;
+    height: 100vh;
+    display: flex;
+}
+#prLeft{
+    width: 50%;
+    height: 100%;
+}
+#hole{
+    position: absolute;
+    background-color: black;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    left: -290px;
+    top: 10px;
+}
+#prheader{
+    position: relative;
+    font-size: 5rem;
+    margin-left: 160px;
+    top: 3%;
+}
+#scrollArea {
+    position: relative;
+    width: 10%;
+    height: 90%;
+    margin-left: 25px;
+    background-color: white;   
+}
+/* hide scrollbar everywhere, keep wheel/trackpad scrolling */
+.scrollbox{
+    overflow-y: auto;          /* or scroll — still scrollable  */
+    scrollbar-width: none;     /* Firefox, Chrome/Edge 121+, etc. */
+    -ms-overflow-style: none;  /* old IE / EdgeHTML             */
+}
+.scrollbox::-webkit-scrollbar{ /* Safari + pre-121 Chromium     */
+    display: none;
+}
+.scroller {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    appearance: slider-vertical;
+    width: 2px;
+    vertical-align: bottom;
+    position: absolute;
+    margin-left: 30px;
+    bottom: -10%;
+    -webkit-appearance: none;
+    height: 300px;
+    border-radius: 50px;
+    background: black;
+}
+
+  
+.scroller::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+#projectsSection{
+    width: auto;
+    height: 65%;
+    padding-left: 180px;
+    margin-top: 5%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.project {
+    margin: 10px;
+    display: grid;                   /* activate CSS Grid */
+    grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns  */
+    grid-template-rows: repeat(2, 1fr);    /* 2 equal-height rows     */
+    gap: 0.4rem;
+    margin-bottom: 20px;
+}
+.projectName {
+    font-size: 35px;
+    line-height: 1.4;
+    cursor: pointer;
+}
+.codeLang {
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 9px;
+}
+.minidescrip{
+    text-align: right;
+}
+.linkBox {
+    width: 180px;
+    height: 110px;
+    border: 1px solid #000;
+}
+#prRight{
+    width: 50%;
+    height: 100%;
+}
+#documentation{
+    width: 95%;
+    height: 74vh;
+    border: 1px solid #000;
+    background-color: white; 
+    margin-right: 10px;
+    margin-top: 40px;
+}
+#docuTitle{
+    font-size: 35px;
+    margin: .60rem;
+}
+
+#docuBoard{
+    display: flex;
+      width: 100%;              /* demo size—scale as needed */
+  height: 85%;
+  box-sizing: border-box;
+}
+#ext {
+    margin-left: 2.5%;
+    margin-top: 1.8%;
+}
+#zeroone{
+    margin: 10px;
+    width: 60%;
+    height: 50%;
+    padding-left: 10px;
+}
+#onethree {
+    display: inline-block;
+    width: 100%;
+}
+#zerotwo{
+    width: 40%;
+    height: 100%;
+}
+#centPic {
+    position: relative;
+    right: 50px;
+    top: 20px;
+    width: 300px;
+    height: 250px;
+    box-shadow: 12px 12px 20px -5px rgba(0, 0, 0, 0.15);
+}
+#onefour{
+    display: block;
+    margin-top: 20px;
+    width: 400px;
+    padding-right: 20px;
+}
+/* Minimal styling */
+.btn-linkedin{
+  display:inline-block;
+  text-decoration: none !important;
+  color: rgb(47, 130, 255);
+  font-weight:600;
+  transition: smooth;
+    transition: color .2s ease-in-out,
+              background-color .2s ease-in-out,
+              padding .2s ease-in-out,
+              border-radius .2s ease-in-out;
+}
+.btn-cent{
+ display:inline-block;
+    text-decoration: none !important;
+  color:#53df4c;
+  font-weight:600;
+    transition: color .2s ease-in-out,
+              background-color .2s ease-in-out,
+              padding .2s ease-in-out,
+              border-radius .2s ease-in-out;
+}
+.btn-linkedin:hover{ color: white;background-color: #0552cd; border-radius: 3px; padding: .5rem;}
+.btn-cent:hover{  color: white;background-color: #37bf0e; border-radius: 3px; padding: .5rem;}
+
+#zeroone ul.skills li{margin:.45rem 0;}
+/* .deader{
+    font-size: 20px;
+} */
+/* Base serif look */
+.deader,
+.skills{
+  color:#000;
+}
+
+/* Experience / Education lines */
+.deader{
+  margin:.75rem 0;
+  font-size:1.35rem;           /* ≈18 px on a 16-px root */
+}
+.deader a{
+  font-weight:400;
+}
+#teader{
+    margin-bottom: .75rem;
+  font-size:1.1rem;  
+}
+
+/* “Technical Skills:” heading (the 3rd .deader) */
+.deader:nth-of-type(3){
+  font-size:1.35rem;          /* ≈22 px */
+  font-weight:700;
+}
+
+/* Bullet list */
+/* .skills{
+  margin-left:1.25rem;        
+  padding-left:.4rem;
+  font-size:.80rem;           
+}
+.skills li{ margin:.25rem 0; }
+#tech {
+    padding-left: 15px;
+    padding-top: 0.3rem;
+} */
+/* ------------------------------------------
+   Stylish colour-coded technical-skills list
+   ------------------------------------------ */
+
+/* ---------- TECHNICAL SKILLS COLOUR-CODED VALUES ---------- */
+
+/* base list styling (keep what you already have) */
+.skills{
+  margin-left:1.25rem;
+  padding-left:.4rem;
+  font-size:.9rem;        /* ≈14–15 px */
+  line-height:1.45;
+  list-style:disc;
+}
+.skills li{ margin:.35rem 0; }
+
+/* keep labels black */
+.skills li strong{ color:#000; }
+
+/* ---------- colour per row (values + bullet) ---------- */
+
+/* 1. Languages – blue */
+.skills li:nth-child(1)::marker{
+  color:#4e91fc;          /* colours the bullet */
+}
+
+/* 2. Web Dev – green */
+.skills li:nth-child(2)::marker{ color:#28c76f; }
+
+/* 3. Databases – orange */
+.skills li:nth-child(3)::marker{ color:#ff9f43; }
+
+/* 4. Tools – red */
+.skills li:nth-child(4)::marker{ color:#ea5455; }
+#awards {
+    font-size: 1.4rem;
+    color: #ebbb10;
+    text-decoration: none;
+    margin: 18px 0px;
+}
+.external {
+    font-size: 1rem;
+}
+.btn-download{
+    text-decoration: none;
+  color: rgb(0, 0, 0);  
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#projPreview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;   
+    width: 95%;
+    height: 75%;
+      font-family: "Press Start 2P", "VT323", "Courier New", monospace;
+  font-size: 14px;          /* pixel fonts need small sizes */
+  letter-spacing: 0.03em;   
+  margin-left: 2.5%;
+  margin-top: 2%;
+}
+#jfline {
+    width: 95%;
+    margin-left: 2%;
+}
+#projfile {
+    height: 70%;
+
+}
+#jfheader {
+    font-size: 2.2rem;
+    margin-left: 2%;
+}
+#jfcontent {
+    display: flex;
+    margin-bottom: 2%;
+}
+#jfvisual {
+    width: 45%;
+    height: 160px;
+    background-color: rgb(198, 198, 198);
+    margin: 10px;
+}
+#jfdesc {
+    font-family: "CrimsonRoman", "Times New Roman", serif;
+    width: 70%;
+    height: auto;
+    margin-top: 2%;
+    margin-right: 2%;
+
+}
+#jftitle {
+display: flex;
+   font-size: 2rem;          /* pixel fonts need small sizes */
+  letter-spacing: 0.03em; 
+  margin: 7px;
+}
+#jflang {
+     font-size: .7rem; 
+     margin-top: 1.2rem;  
+}
+#jftext {
+   font-size: 1rem;          /* pixel fonts need small sizes */
+  letter-spacing: 0.03em; 
+  text-align: right;
+  margin-right: 2%;
+}
+#jfslider {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: .5rem 0;
+
+  /* Hide scrollbar cross-browser */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+
+#jfslider::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}
+
+.jfproject-container {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  padding: 0 1rem;
+}
+
+.jfproject-item {
+  flex: 0 0 auto;
+  width: 140px;
+  height: 90px;
+  background-color: #ccc;
+}
+
+/* optional hover effect */
+.more-info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#onefour {
+    margin-left: 5px;
+}
+/* GitHub button */
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 800;
+  transition:
+    background .3s ease,
+    transform  .3s ease,
+    box-shadow .3s ease;
+}
+.btn-github i {
+  margin-left: .5rem;
+  font-size: 1.2em;
+}
+.btn-github:hover {
+  background: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,187 @@
+
+/* About Page */
+
+#aboutus {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about{
+    position: absolute;
+    width: auto;
+    height: 13%;
+    border: 1.4px solid #000;
+    background-color: white;
+    margin: 20px; 
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 50px;
+    z-index: 3;
+    top: 110%;
+}
+#sphere {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: black;
+    border-radius: 50%;
+    left: 16%;
+    top: 114%;
+    z-index: -2;
+}
+#aboutCard {
+    display: flex;
+    margin: 5%;
+    width: 60%;
+    height: 55%;
+    border: 1.4px solid #000;
+    background-color: white;
+    border-radius: 16px;
+    z-index: 2;
+    transition:
+    transform .15s ease,
+    box-shadow .25s ease;
+}
+#sphereTwo {
+    position: absolute;
+    width: 17%;
+    height: 37%;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 1;
+    top: 158%;
+    left: 69%;
+}
+.more-info {
+  z-index: 5;
+  position: absolute;
+  top: 153%;
+  left: 60%;
+  margin-top: 160px;
+  margin-left: 70px;
+  padding: 1.1rem 1.4rem;              /* room to breathe */
+  background-color: #ffffff;             /* white background */                     /* black text */
+  font-size: 1.5em;                    /* matches your mock-up’s size */
+  font-weight: 300;
+  font-family: inherit;               /* stay consistent with site */
+  border: 1px solid #000;             /* solid black border */
+  border-radius: 26px;                /* soft corners */
+  text-decoration: none;              /* remove underline on <a> */
+  cursor: pointer;
+  transition:
+    transform .15s ease,
+    box-shadow .25s ease;
+}
+#pix {
+   width: 45%;
+   height: auto;
+    margin: 10px;
+    align-content: flex-end;
+}
+#pix p {
+    font-size: 1.4rem;
+    margin-left: 12%;
+    margin-bottom: 10%;
+}
+#text {
+  display: flex;
+align-items: center;
+justify-content: flex-end;
+  width: 65%;
+    font-size: 1.1rem;
+    line-height: 1.6;                                 /* comfortable vertical rhythm */
+    letter-spacing: 0.04em;                           /* subtle – don’t over-space  */
+    text-align: justify;
+    hyphens: auto; 
+    margin: 26px 40px 30px 4px;
+}
+#text p {
+  text-indent: 2em;
+margin-right: 40px;
+}
+#humanpicture{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 78%;
+  border-radius: 0% 60% 0% 20% / 0% 60% 0% 20%;
+    background-image: url(damn.jpg);
+    background-size: cover;
+    margin: 28px 20px 15px 30px;
+}
+.about-icons {
+  display: flex;
+  flex-direction: column; /* stack vertically; use row for horizontal */
+  gap: 1rem;              /* space between icons */
+}
+
+/* treat each icon like a tiny button */
+.icon-btn {
+  display: inline-flex;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  transition: background 0.2s;
+}
+
+.icon-btn img {
+  width: 48px;
+  height: 48px;
+}
+
+/* simple, subtle hover */
+.icon-btn:hover,
+.icon-btn:focus-visible {
+  background: rgba(0, 0, 0, 0.08); /* light gray overlay */
+}
+
+/* no extra filter needed */
+
+
+#abt-info {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 176%;
+    left: 21%;
+
+      /* start fully hidden */
+  opacity:0;
+  transform-origin:top center;      /* where the fold begins */
+  transform:scaleY(0);              /* flattened behind the card */
+  transition:opacity .35s ease, 
+             transform .35s ease;
+  pointer-events:none;              /* ignore clicks while hidden */
+}
+
+/* pure-CSS trigger (works on desktop hover) */
+#aboutCard:hover + #abt-info{
+  opacity:1;
+  transform:scaleY(1);              /* unfold */
+  pointer-events:auto;
+}
+
+/* JS trigger (touch / keyboard users) */
+#abt-info.show{                     /* class added by JS */
+  opacity:1;
+  transform:scaleY(1);
+  pointer-events:auto;
+}
+/* keyframes */
+@keyframes growOnce {
+  0%   { transform: scale(0.65); }
+  100% { transform: scale(1);   }
+}
+
+/* apply */
+#sphere {
+  /* …your existing properties… */
+  animation: growOnce 1.5s ease-out forwards; /* runs once, stays large */
+  transform-origin: center;
+}
+
+#sphereTwo {
+  /* …your existing properties… */
+  animation: growOnce 2s ease-out forwards;
+  transform-origin: center;
+}
+
