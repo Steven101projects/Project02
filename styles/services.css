@@ -56,10 +56,18 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition:
-    transform 0.25s cubic-bezier(.4,.3,.4,1),
-    box-shadow 0.22s cubic-bezier(.4,.3,.4,1);
+  /* define initial filter */
+  filter: invert(0);
+  /* transition on filter, transform and box-shadow */
+    transition: all 0.75s ease;
 }
+
+.service-card:hover {
+  filter: invert(1);
+  transform: translateY(-18px);
+  box-shadow: 0 24px 32px -12px rgba(30,30,30,0.12);
+}
+
 
 .service-card:hover,
 .service-card:focus-visible {
@@ -206,9 +214,9 @@
   align-self: end;
   margin-left: 85%;
   padding: 0.7rem 2.3rem;
+  color: #111;
   background: #fff;
   border: 1.5px solid #111;
-  color: #111;
   border-radius: 1.7rem;
   font-size: 1.15rem;
   font-family: 'Georgia', serif;

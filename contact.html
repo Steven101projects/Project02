@@ -5,18 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
   <title>101.PROJECTS // CONTACT</title>
 </head>
 
 <body>
-      <nav>
+  <nav>
     <a href="index.html">Home</a>
     <a href="index.html#projects">Projects</a>
     <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+    <a class="current" href="contact.html">Contact</a>
     <a href=""><i>Hub</i></a>
   </nav>
-    <hr id="line">
+  <hr id="line">
+  <div id="contact">
+    <div class="contactRight">
+      <div class="circlePic"></div>
+            <p>Email: <b>castroconi101@gmail.com</b> ||
+Phone:<b> +1 (437) 445-1436 </b></p>
+    </div>
+    <div class="contact-card">
+      <h1 class="contact-card__title">Send a message</h1>
+      <form class="contact-card__form" action="#" method="post">
+        <input type="text" name="name" placeholder="Name" class="contact-card__input" required />
+        <input type="tel" name="contact" placeholder="Contact Number" class="contact-card__input" required />
+        <input type="email" name="email" placeholder="Email Address" class="contact-card__input" required />
+        <textarea name="message" placeholder="Your Message" rows="5" class="contact-card__textarea" required></textarea>
+        <button type="submit" class="contact-card__btn">Send</button>
+      </form>
+    </div>
+
+  </div>
 </body>
 
 </html>

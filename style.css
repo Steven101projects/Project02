@@ -25,6 +25,34 @@ nav a:hover,
 nav a:focus-visible {
   transform: scale(1.13);
 }
+
+/* Animated underline using a pseudo-element */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;                    /* just below the text */
+  width: 100%;
+  height: 2px;
+  background-color: black;     /* accent color */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+/* Animate the underline in */
+nav a:hover::after,
+nav a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.current {
+  text-decoration: underline;
+  text-decoration-color: currentColor;   /* use the element’s text color */
+  text-decoration-thickness: 1.3px;        /* make the line super thin */
+  text-underline-offset: 2px;            /* give it some breathing room */
+}
+
 #line{
     width: 91%;
     margin-left: auto;
