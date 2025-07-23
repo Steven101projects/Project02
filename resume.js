@@ -43,3 +43,10 @@ toggleButton();
 document.getElementById('goBack').addEventListener('click', () => {
     window.location.href = '#home';          // or '/index.html' if you prefer
   });
+
+
+  document.getElementById("menuButton").addEventListener("click", () => {
+    /* toggle the effect on and off */
+    document.getElementById("menuButton").style.filter = document.getElementById("menuButton").style.filter === "invert(1)" ? "" : "invert(1)";
+    document.getElementById("welcomeText").style.fontStyle = document.getElementById("welcomeText").style.fontStyle === "italic" ? "normal" : "italic";
+  });

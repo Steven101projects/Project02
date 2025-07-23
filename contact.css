@@ -1,7 +1,7 @@
 /* card wrapper */
 .contact-card {
   width: 40%;
-  margin: 1rem .5rem;
+  margin: 1rem 0rem;
   padding: 2rem;
   border: 1px solid #000;
   border-radius: 8px;
@@ -75,7 +75,7 @@ margin-top: 3%;
 .contactRight {
     display: flex;
     flex-direction: column;
-    width: 55%;
+    width: 50%;
     height: auto;
     align-items: center;
     margin-top: 1%;
@@ -83,21 +83,16 @@ margin-top: 3%;
 
 .contactRight p {
     text-align: center;
-    margin-top: 2%;
-    font-style: italic;
+    margin-top: 4%;
     font-size: 1rem;
 }
 
 .circlePic {
-  width: 65%;
+  width: 55%;
   aspect-ratio: 1 / 1;               /* forces height = width */
   border-radius: 50%;
   background: url(contactPic.jpg);
   background-size: cover;
-  margin-top: 1%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* subtle shadow */
-}
-
-.circlePic:hover {
-    background: none;
+  margin-top: 8%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);  /* subtle shadow */
 }

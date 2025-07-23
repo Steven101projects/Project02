@@ -148,7 +148,8 @@
     font-size: 0.97rem;
     letter-spacing: 0.025em;
     line-height: 1.55;
-    text-align: justify;
+    text-align: center;
+      text-indent: 0;
   }
 
   /* social-icon column → row */
@@ -158,6 +159,7 @@
     gap: 0.8rem;
     margin-top: 1.2rem;
     margin-right: 2rem;
+    margin-bottom: 2rem;
   }
   .icon-btn img{ width: 40px; height: 40px; }
 
@@ -396,4 +398,103 @@ img,video,canvas{max-width:100%;height:auto}
   .service-card img {
     height: 70%;
 }
+}
+
+/* ================================================
+   Tablet & Mobile (≤768px)
+   ================================================ */
+@media only screen and (max-width: 768px) {
+  /* nav: wrap & center links */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  nav a {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+  }
+
+  /* stack contact info + form */
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .contactRight,
+  .contact-card {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* center and shrink the circle image */
+  .circlePic {
+    width: 140px;
+    aspect-ratio: 1/1;
+    margin: 0 auto 1rem;
+  }
+
+  .contactRight p {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  /* form adjustments */
+  .contact-card__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-card__input,
+  .contact-card__textarea {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .contact-card__btn {
+    width: 100%;
+    max-width: none;
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+}
+
+/* ================================================
+   Mobile (≤480px)
+   ================================================ */
+@media only screen and (max-width: 480px) {
+  /* slightly smaller text */
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .contact-card__title {
+    font-size: 1.6rem;
+  }
+
+  .contactRight p {
+    font-size: 0.9rem;
+  }
+
+  .contact-card__input,
+  .contact-card__textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-card__btn {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .circlePic {
+    width: 120px;
+  }
 }
