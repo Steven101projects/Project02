@@ -145,6 +145,38 @@ html {
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
+/* original rule, plus two lines added */
+#navMenu {
+  position: absolute;
+  width: 30%;
+  height: 20%;
+  top: 123%;
+  left: -7%;
+  padding-left: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  transform: translateX(-120%);     
+  transition: transform 1s ease;  
+}
+
+#navMenu.show {
+  transform: translateX(0);
+}
+#navMenu div {
+  width: 100%;
+}
+
+#navMenu span {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0 8%;
+  text-align: center;
+  cursor: pointer;
+}
+
+
 
 #welcomePart {
   padding-left: 5%;
@@ -155,9 +187,9 @@ html {
   align-items: center;
 }
 #welcomeSign p {
-  font-size: 5.6rem;
-  font-style: italic;
+  font-size: 5rem;
   margin-left: 1%;
+  font-style: italic;
 }
 
 #menuButton {
@@ -194,15 +226,24 @@ html {
 
 #quotes {
   width: 87%;
-  height: 30%;
+  height: 25%;
   margin-top: 3%;
   margin-left: 5%;
   margin-bottom: 5%;
 }
+
+#quoteBox {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10%;
+  font-style: italic;
+}
 #lookingservices {
   width: 87%;
-  height: 35%;
+  height: 40%;
   margin-left: 5%;
+  font-size: 1.5rem;
 }
 
 #greetings {

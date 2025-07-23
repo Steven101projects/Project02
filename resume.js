@@ -48,5 +48,25 @@ document.getElementById('goBack').addEventListener('click', () => {
   document.getElementById("menuButton").addEventListener("click", () => {
     /* toggle the effect on and off */
     document.getElementById("menuButton").style.filter = document.getElementById("menuButton").style.filter === "invert(1)" ? "" : "invert(1)";
-    document.getElementById("welcomeText").style.fontStyle = document.getElementById("welcomeText").style.fontStyle === "italic" ? "normal" : "italic";
+    document.getElementById('navMenu').classList.toggle('show');
   });
+
+  const quotes = [
+  "Code is like poetry, it needs rhythm.",
+  "Every brushstroke is a step toward mastery.",
+  "Great software begins with a curious question.",
+  "Fail fast learn faster.",
+  "Vision is the engine, practice is the fuel.",
+  "Small commits build massive creations.",
+  "Art blooms when courage meets patience.",
+  "Debugging is the art of seeing the unseen.",
+  "Creativity lives where logic and wonder shake hands.",
+  "Refactor not to perfect code but to perfect understanding.",
+  "Color outside the lines then write the tool that draws new lines.",
+  "A single line of code can spark a universe of ideas.",
+  "Practice is the architect of inspiration.",
+  "Design with purpose test with curiosity.",
+  "Keep shipping learn and refine."
+];
+const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+document.getElementById("quoteBox").textContent = `"` + randomQuote + `"`; 
