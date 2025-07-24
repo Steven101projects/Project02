@@ -160,6 +160,7 @@ html {
 
   transform: translateX(-120%);     
   transition: transform 1s ease;  
+    z-index: 9;
 }
 
 #navMenu.show {
@@ -188,8 +189,20 @@ html {
 }
 #welcomeSign p {
   font-size: 5rem;
-  margin-left: 1%;
+  margin-left: 4%;
   font-style: italic;
+}
+
+/* base state */
+#welcomeText {
+  display: inline-block;          /* isolate the transform */
+  transition: transform 0.6s;     /* smooth half-second motion */
+  transform-origin: center;       /* pivot around the middle */
+}
+
+/* hover state: vertical flip */
+#welcomeText:hover {
+  transform: rotateX(360deg);     /* turn over the horizontal axis */
 }
 
 #menuButton {
@@ -205,7 +218,7 @@ html {
   gap: 7px;            /* space between bars */
   cursor: pointer;
   padding: 0;
-    transition: filter 0.3s ease-out;
+  transition: transform 0.3s ease;
 }
 /* three white bars */
 #menuButton span {
@@ -225,26 +238,84 @@ html {
 
 
 #quotes {
+    font-family: Arial, Helvetica, sans-serif;
   width: 87%;
   height: 25%;
   margin-top: 3%;
   margin-left: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
+  background-image: url(quotes.jpg);
+  background-size: cover;
+  color: white;
 }
 
 #quoteBox {
+  
+  position: relative;
   width: 100%;
+  margin-top: 3%;          /* keep your original offset */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 1.5rem;
-  margin-top: 10%;
+
+  /* visual tweaks */
+  padding: 3% 5%;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1.2em;
+  line-height: 1.4em;
   font-style: italic;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+
+  border-radius: 18px;
+  overflow: hidden;
 }
+
+/* updated card */
 #lookingservices {
   width: 87%;
-  height: 40%;
+  height: 44%;
   margin-left: 5%;
+  padding: 2%;
   font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
+
+/* gallery strip */
+#servicesGallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 3rem;
+  -webkit-overflow-scrolling: touch;
+
+    /* hide the scrollbar in every engine */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;  
+}
+
+#servicesGallery::-webkit-scrollbar { /* Chrome, Safari */
+  display: none;
+}
+
+.lookImg {
+  flex: 0 0 auto;
+  width: 200px;   
+  object-fit: cover;
+}
+
+#lookingservices  > p:last-child {
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
 
 #greetings {
   width: 100%;
@@ -253,10 +324,55 @@ html {
           padding: 3%;
 }
 
+#greetingsBox {
+  height: 80%;
+}
+
+#greetings > p:first-child {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#greetingsBox img {
+  position: relative;
+  width: 320px;
+  top: -130px;
+  left: 90px;
+}
+
+#greetingsBox button {
+  background: #442506;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 700;
+  padding: 0.9rem 1.8rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+  margin-top: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#greetingsBox button:hover {
+  filter: brightness(1.1);
+}
+
+#greetings > p:last-child {
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
 #recently {
   display: flex;
   width: 100%;
-  height: 48%;
+  height: 50%;
   margin-top: 5%;
   align-items: end;
   justify-content: end;
@@ -264,9 +380,9 @@ html {
 
 #longone {
   width: 80%;
-  height: 80%;
+  height: 87%;
   margin-left: 10%;
-  margin-top: 8%;
+  margin-top: 4%;
 }
 
 /* About Page */

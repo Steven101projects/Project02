@@ -47,7 +47,7 @@ document.getElementById('goBack').addEventListener('click', () => {
 
   document.getElementById("menuButton").addEventListener("click", () => {
     /* toggle the effect on and off */
-    document.getElementById("menuButton").style.filter = document.getElementById("menuButton").style.filter === "invert(1)" ? "" : "invert(1)";
+    document.getElementById("menuButton").style.transform = document.getElementById("menuButton").style.transform === "rotate(90deg)" ? "" : "rotate(90deg)";
     document.getElementById('navMenu').classList.toggle('show');
   });
 
@@ -55,7 +55,7 @@ document.getElementById('goBack').addEventListener('click', () => {
   "Code is like poetry, it needs rhythm.",
   "Every brushstroke is a step toward mastery.",
   "Great software begins with a curious question.",
-  "Fail fast learn faster.",
+  "Fail fast, learn faster.",
   "Vision is the engine, practice is the fuel.",
   "Small commits build massive creations.",
   "Art blooms when courage meets patience.",
