@@ -240,7 +240,7 @@ html {
 #quotes {
     font-family: Arial, Helvetica, sans-serif;
   width: 87%;
-  height: 35%;
+  height: 31%;
   margin-top: 3%;
   margin-left: 5%;
   margin-bottom: 4%;
@@ -371,13 +371,15 @@ html {
 
 #recently {
   width: 100%;
-  height: 50%;
-  margin-top: 5%;
+  height: 45%;
+  margin-top: 6%;
+
 }
 .recentImg {
-  width: 360px;
+  width: 92%;
   height: 220px;
   margin: 4%;
+    border-radius: 1rem;
 }
 
 #recently p:first-of-type {
@@ -388,10 +390,11 @@ html {
   text-decoration-style: double;
   text-underline-offset: 6px; /* adds space between text and underline */
   color: #e89a13;
+  margin-top: 2%;
 }
 
 #recently button {
-  position: absolute;
+  position:  relative;
   font-size: 1rem;
   padding: 1rem 2rem;
   border: none;
@@ -399,12 +402,12 @@ html {
   cursor: pointer;
   font-family: Georgia, 'Times New Roman', Times, serif;
   transition: all 0.25s ease-in-out;
-  top: 188%;
-  left: 48%;
   background-color: #fff;
   color: #e89a13;
   font-weight: 700;
   border: 1.4px solid #e89a13;
+  top: -38px;
+  right: -26px;
 }
 
 #recently button:hover {
@@ -416,17 +419,40 @@ html {
 
 #recently p:last-child{
   text-align: end;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-right: 5%;
   font-style: italic;
+  position: relative;
+  bottom: -6%;
 }
 
 
 #longone {
   width: 80%;
-  height: 88%;
+  height: 82%;
   margin-left: 10%;
   margin-top: 4%;
+}
+
+#longgone{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+    margin-top: 4%;
+}
+
+#gamearea {
+  background-color: black;
+  width: 85%;
+  height: 60%;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* About Page */

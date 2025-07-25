@@ -47,7 +47,7 @@ document.getElementById('goBack').addEventListener('click', () => {
 
   document.getElementById("menuButton").addEventListener("click", () => {
     /* toggle the effect on and off */
-    document.getElementById("menuButton").style.transform = document.getElementById("menuButton").style.transform === "rotate(90deg)" ? "" : "rotate(90deg)";
+    document.getElementById("menuButton").style.transform = document.getElementById("menuButton").style.transform === "rotate(90deg)" ? "rotate(-180deg)" : "rotate(90deg)";
     document.getElementById('navMenu').classList.toggle('show');
   });
 
@@ -70,3 +70,5 @@ document.getElementById('goBack').addEventListener('click', () => {
 ];
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 document.getElementById("quoteBox").textContent = `"` + randomQuote + `"`; 
+
+
