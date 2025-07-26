@@ -358,7 +358,7 @@ html {
 }
 
 #greetingsBox button:hover {
-  filter: brightness(1.1);
+  filter: brightness(2.1);
 }
 
 #greetings > p:last-child {
@@ -379,7 +379,6 @@ html {
   width: 92%;
   height: 220px;
   margin: 4%;
-    border-radius: 1rem;
 }
 
 #recently p:first-of-type {
@@ -447,12 +446,22 @@ html {
   background-color: black;
   width: 85%;
   height: 60%;
+
 }
 
 #gameCanvas {
   width: 100%;
   height: 100%;
   display: block;
+
+}
+
+#gameIns {
+  text-align: center;
+  font-size: 1.1rem;                /* slightly larger for clarity */
+  line-height: -1;                 /* more breathing room between lines */
+  letter-spacing: 0.05em;           /* gentle spacing for monospace */
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* About Page */
