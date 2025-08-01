@@ -1662,7 +1662,7 @@ html {
 
 /* class added by JS when menu enters viewport */
 .menu.slide-in {
-  animation: slideInUp 1.3s ease-out forwards; /* forwards keeps end state */
+  animation: slideInUp 0.8s ease-out forwards; /* forwards keeps end state */
 }
 
 
