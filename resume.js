@@ -72,3 +72,21 @@ const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 document.getElementById("quoteBox").textContent = `"` + randomQuote + `"`; 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.querySelector('.menu');
+
+  // watch when at least 25 % of the menu is visible
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          menu.classList.add('slide-in'); // trigger the animation
+          observer.unobserve(menu);       // run only once
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  observer.observe(menu);
+});
