@@ -499,54 +499,52 @@ img,video,canvas{max-width:100%;height:auto}
   }
 }
 /* ─────────────────────────────────────────────
-   MOBILE MENU FIX – override desktop 100vh
+   MOBILE MENU SHRINK – ≤ 768px
    ───────────────────────────────────────────── */
 @media (max-width:768px) {
-  /* make .menu size to its content, not full viewport */
+  /* container */
   .menu {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-start;
-    align-items: stretch;
+    gap: 0.5rem !important;
+    padding: 0.5rem !important;
+    margin-bottom: 1rem !important;
     height: auto !important;
-    padding: 1rem;
-    gap: 1rem;
-    overflow: visible !important;
-    margin-bottom: 2rem;
   }
 
-  /* each card fills width and stacks neatly */
+  /* cards */
   .menuCard {
-    flex: 1 1 auto !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 1rem !important;
+    padding: 0.75rem !important;
     box-sizing: border-box;
   }
 
-  /* ensure welcomePart items stack */
+  /* welcomePart spacing */
   #welcomePart {
     display: flex !important;
     flex-direction: column !important;
-    gap: 1rem !important;
+    gap: 0.75rem !important;
     width: 100% !important;
   }
 
-  /* centerPart and otherStuff should also stack */
-  #centerPart,
-  #otherStuff {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1rem !important;
-    width: 100% !important;
+  /* shrink hamburger button */
+  #menuButton {
+    width: 48px !important;
+    height: 48px !important;
+    gap: 4px !important;
+  }
+  #menuButton span {
+    height: 4px !important;
   }
 
-    /* make the hub invitation text white on mobile */
+  /* smaller welcome text */
+  #welcomeText {
+    font-size: clamp(1.6rem, 6vw, 2rem) !important;
+  }
+
+  /* hub invite */
   #hubInv {
     color: #ffffff;
-  }
-
-  #welcomeText {
-    font-size: 3.6rem !important;
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
   }
 }
